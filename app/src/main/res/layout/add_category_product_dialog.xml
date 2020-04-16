@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="250dp"
+    android:minWidth="250dp">
+    <TextView
+        android:id="@+id/add_category_product_dialog_new_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Nouveau Produit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <EditText
+        android:id="@+id/add_category_product_dialog_new_product_name"
+        android:layout_width="match_parent"
+        android:minWidth="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add_category_product_dialog_new_product_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/add_category_product_dialog_new_product_quantity"
+        android:hint="Nouveau produit"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+    <Spinner
+        android:id="@+id/add_category_product_dialog_new_product_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_category_product_dialog_new_product_submit"
+        app:layout_constraintRight_toRightOf="parent"
+        android:entries="@array/product_quantities"
+        app:layout_constraintBottom_toTopOf="parent"/>
+    <Button
+        android:id="@+id/add_category_product_dialog_new_product_submit"
+        app:layout_constraintTop_toBottomOf="@id/add_category_product_dialog_new_product_quantity"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/SubmitButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
